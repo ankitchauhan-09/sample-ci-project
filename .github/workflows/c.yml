@@ -1,0 +1,26 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-2025-vs2026
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Project Files
+        run: ls -la
+
+      - name: Build Application
+        run: echo "Building Sample Application..."
+
+      - name: Build Successful
+        run: echo "Build Completed Successfully"
+
